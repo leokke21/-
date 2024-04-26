@@ -1,0 +1,270 @@
+/* :root{
+    --background: #171414;
+    --banner-background: #5656564f;
+    --text-color: #BCB0B0;
+    --header-text-color: #29D3B3;
+    --first-button-color-inactive: #2addbcb0;
+    --second-button-color: #9917FF;
+    --second-button-color-inactive: #9a17ff96;
+    
+} */
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 90%;
+    margin: auto;
+    margin-top: 80px;
+}
+/* Посты */
+
+.post-link{
+    text-decoration: none;
+}
+.post-card *{
+    background-color: rgb(0, 0, 0,0);
+}
+.post-card{
+    display: flex;  
+    /* height: 30%; */
+    gap: 25px;
+    /* width: 80%; */
+    border: 2px solid var(--first-button-color-inactive);
+    background-color: var(--banner-background);
+}
+.post-card img{
+    width: 500px;
+    object-fit: contain;
+}
+.post-card h3{
+    color: var(--header-text-color);
+    font-size: 18pt;
+    margin: 10px;
+    margin-left: 0px ;
+}
+.post-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.post-message{
+    width: 90%;
+    font-size: 14pt;
+    line-height: 18pt;
+    text-align: justify;
+}
+.post-block{
+    
+    height: 85%;
+}
+.post-date-block{
+    height: 15%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    /* position: relative;
+    left: 80%;
+    bottom: 45%; */
+}
+.post-date{
+    padding-right: 35px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    background-color: var(--banner-background);
+    border: 2px solid var(--first-button-color-inactive);
+
+}
+.post *{
+    background-color: rgba(255, 255, 255, 0);
+}
+@media (max-width: 1200px) {
+    .post{
+        width: 90%;
+    }
+    
+}
+@media (min-width: 1200px) {
+    .post p{
+        font-size: 18pt;
+    }
+    
+}
+.post img{
+    width: 100%;
+    object-fit: contain;
+}
+.one-post-info{
+    width: 100%;
+    padding: 15px;
+}
+.one-post-info h1{
+    color: var(--header-text-color);
+}
+.one-post-text{
+    width: 100%;
+    padding: 15px;
+
+}
+
+/* Комментарии */
+.addcomment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.addcomment .comment-input{
+    width: 70%;
+    height: 40px;
+    background-color: var(--banner-background);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+.addcomment button{
+    width: 120px;
+    height: 44px;
+    background-color: var(--first-button-color-active);
+    border-radius: 5px;
+    color: white;
+
+}
+.button{
+    
+    width: 120px;
+    height: 44px;
+    background-color: var(--first-button-color-active);
+    background-color: rgba(32, 207, 184, 0.253);
+    color: var(--text-color);
+    border-radius: 5px;
+    color: white;
+}
+.addcomment button:disabled{
+    background-color: rgba(32, 207, 184, 0.253);
+    color: var(--text-color);
+}
+.comment{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    background-color: var(--banner-background);
+}
+.comment *{
+    background-color: rgba(255, 255, 255, 0);
+}
+.user-avatar{
+    margin: 5px;
+    margin-right: 0px;
+    background-color: transparent;
+}
+.user-avatar img{
+    width: 90px;
+    height:90px;
+    border-radius: 50%;
+}
+.comment-text{
+    padding-top: 10px;
+    width: 100%;
+}
+.comment-author-date{
+    display: flex;
+    gap: 10px;
+}
+
+.comment-author-date p{
+    display: flex;
+    align-items: center;
+    font-size: 10pt;
+    color: #565656;
+}
+
+/* Registration */
+.registerform{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* width: 60%; */
+    margin: auto;
+    padding: 45px;
+    background-color: var(--banner-background);
+    border-radius: 15px;
+
+}
+.registerform *{
+    background-color: rgba(255, 255, 255, 0);
+}
+.registerform .form-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 18pt;
+}
+.form-element input{
+    font-size: 18pt;
+}
+.submitregister{
+    background-color: var(--first-button-color-inactive);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px;
+}
+.error{
+    display: none;
+    background-color: red;
+    margin: 10px;
+    padding: 15px;
+}
+/* Редактирование профиля */
+.flex-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border: 2px solid var(--first-button-color-inactive);
+    padding: 20px;
+}
+.profile{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.input-text{
+    font-size: 14pt;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.label{
+    font-size: 14pt;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+}
+.error-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    
+}
+.error-message p{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(233, 62, 62);
+}
